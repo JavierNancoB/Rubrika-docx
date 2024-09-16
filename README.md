@@ -1,10 +1,29 @@
 # Rubrika-docx
 Trabajo del ramo de taller de sistemas de información
 
+# Objetivo de la App
+
+Este proyecto tiene como objetivo desarrollar una aplicación en **Python** que permita la automatización de la generación de documentos legales para empresas. La aplicación se encargará de:
+
+1. **Leer archivos .docx** utilizando la biblioteca `python-docx`.
+2. **Identificar y reemplazar variables** en los documentos por claves o keys preestablecidas, según los datos específicos de cada empresa.
+3. **Generar múltiples documentos legales** a partir de una plantilla base, integrando la información personalizada desde una base de datos.
+
+### Tecnologías utilizadas:
+- **Python**: Lenguaje principal de la aplicación.
+- **Flask**: Framework web para la gestión y despliegue de la aplicación.
+- **pytest**: Framework para pruebas unitarias, garantizando la calidad del código.
+- **python-docx**: Biblioteca para la lectura y modificación de archivos Word (.docx).
+- **Base de datos**: Para almacenar la información de las empresas que deseen generar documentos legales personalizados.
+
+### Funcionalidades principales:
+- Leer archivos `.docx` e identificar variables en el contenido del documento.
+- Reemplazar las variables del documento por información predefinida almacenada en la base de datos.
+- Generar automáticamente documentos legales personalizados para cada cliente.
+  
 ## Archivos necesarios
 
 Trabajaremos con Python, Flask como microframework y el framework pytest, ademas utilizaremos la libreria python-docx para la lectura de los archivos en formato .docx
-
 
 # Instalación de Python, Flask y pytest
 

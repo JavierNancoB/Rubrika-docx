@@ -1,5 +1,5 @@
 # Rubrika-docx
-Trabajo del ramo de taller de sistemas de información
+Trabajo del ramo de Taller de sistemas de información
 
 # Objetivo de la App
 

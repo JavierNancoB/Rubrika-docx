@@ -9,9 +9,11 @@ def limpiar_texto(texto):
     texto = re.sub(r'[_\s]+', ' ', texto)  # Reemplaza guiones bajos y múltiples espacios por un solo espacio
     return texto.strip().lower()  # Elimina espacios al inicio/final y convierte todo a minúsculas
 
-# Función para calcular la similitud sintáctica
+# Función para calcular la similitud sintáctica ajustada por longitud del documento más corto
 def calcular_similitud(texto1, texto2):
-    return SequenceMatcher(None, texto1, texto2).ratio() * 100  # Retorna porcentaje de similitud
+    similitud = SequenceMatcher(None, texto1, texto2).ratio()
+    longitud_minima = min(len(texto1), len(texto2))
+    return (similitud * longitud_minima / len(texto1)) * 100
 
 # Función para leer el contenido de un archivo Word
 def leer_archivo_word(ruta_archivo):
@@ -45,23 +47,22 @@ for archivo_base, contenido_base in documentos.items():
         if archivo_base != archivo_comparado and archivo_comparado not in archivos_agrupados:
             similitud = calcular_similitud(contenido_base, contenido_comparado)
             
-            if similitud >= 97.5:  # Si la similitud es del 97% o más, añadir al grupo
+            if similitud >= 97.4:  # Si la similitud es del 95% o más, añadir al grupo
                 grupo_similares.append(archivo_comparado)
                 archivos_agrupados.add(archivo_comparado)  # Marcar como agrupado
 
-    # Crear una carpeta para el grupo si tiene más de un archivo
-    if len(grupo_similares) > 1:
-        nombre_grupo = f"Grupo_{archivo_base.split('.')[0]}"
-        carpeta_grupo = os.path.join(carpeta_resultado, nombre_grupo)
-        os.makedirs(carpeta_grupo, exist_ok=True)
+    # Crear una carpeta para el grupo, incluso si solo contiene un archivo
+    nombre_grupo = f"Grupo_{archivo_base.split('.')[0]}"
+    carpeta_grupo = os.path.join(carpeta_resultado, nombre_grupo)
+    os.makedirs(carpeta_grupo, exist_ok=True)
 
-        # Copiar archivos del grupo a la carpeta de grupo
-        for archivo in grupo_similares:
-            ruta_origen = os.path.join(carpeta_original, archivo)
-            ruta_destino = os.path.join(carpeta_grupo, archivo)
-            shutil.copy2(ruta_origen, ruta_destino)
+    # Copiar archivos del grupo a la carpeta de grupo
+    for archivo in grupo_similares:
+        ruta_origen = os.path.join(carpeta_original, archivo)
+        ruta_destino = os.path.join(carpeta_grupo, archivo)
+        shutil.copy2(ruta_origen, ruta_destino)
 
-        # Marcar archivo base como agrupado
-        archivos_agrupados.add(archivo_base)
+    # Marcar archivo base como agrupado
+    archivos_agrupados.add(archivo_base)
 
 print("Comparación completada. Los documentos similares se han organizado en grupos en la carpeta:", carpeta_resultado)

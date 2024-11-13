@@ -1,10 +1,7 @@
 import os
 from datetime import datetime
-from collections import Counter
 from document_reader import read_docx
-from text_cleaner import preprocess, generate_ngrams
-from section_extractor import extract_sections
-from similarity_calculator import calculate_similarity_matrix, find_optimal_matching
+from text_cleaner import preprocess
 from file_writer import write_all_results
 
 # Configuración de rutas
@@ -19,12 +16,11 @@ documents = [read_docx(os.path.join(docs_dir, file)) for file in files]
 
 # Procesar los documentos
 processed_docs = [preprocess(doc) for doc in documents]
-sectioned_docs = [extract_sections(doc) for doc in documents]
 
 # Generar timestamp y nombre de archivo de resultados
 timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
 result_file_path = os.path.join(output_dir, f"resultados_analisis_{timestamp}.txt")
 
 # Escribir resultados en archivo
-write_all_results(result_file_path, files, processed_docs,)  # Asegúrate de pasar documents aquí
+write_all_results(result_file_path, files, processed_docs, documents)  # Incluye documents como raw_docs
 print(f"Análisis completado y guardado en '{result_file_path}'.")

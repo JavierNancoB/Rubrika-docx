@@ -1,0 +1,44 @@
+Análisis de Documentos
+=================================
+Total_palabras:
+Promedio: 2273.14
+Minimo: 2246.00
+Maximo: 2332.00
+Moda: 2252.00
+Percentil_01: 2246.00
+
+Palabras_comunes:
+Promedio: 1996.71
+Minimo: 1985.00
+Maximo: 2028.00
+Moda: 1992.00
+Percentil_01: 1985.42
+
+Similitud_coseno:
+Promedio: 0.99
+Minimo: 0.99
+Maximo: 1.00
+Moda: 0.99
+Percentil_01: 0.99
+
+Similitud_jaccard:
+Promedio: 0.93
+Minimo: 0.92
+Maximo: 0.99
+Moda: 0.92
+Percentil_01: 0.92
+
+Similitud_dice:
+Promedio: 0.97
+Minimo: 0.96
+Maximo: 1.00
+Moda: 0.96
+Percentil_01: 0.96
+
+Distancia_levenshtein:
+Promedio: 106.29
+Minimo: 11.00
+Maximo: 128.00
+Moda: 11.00
+Percentil_01: 17.24
+

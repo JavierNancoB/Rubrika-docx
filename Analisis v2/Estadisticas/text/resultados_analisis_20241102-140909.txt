@@ -1,0 +1,15 @@
+Análisis de Documentos
+=================================
+Documento: Contrato CM Art 22 (Plazo Fijo).docx
+Total de palabras (sin stopwords): 2252
+
+Documento: Contrato CM Mesa de Ayuda (Plazo Fijo).docx
+Total de palabras (sin stopwords): 2325
+
+Comparaciones entre Contrato CM Art 22 (Plazo Fijo).docx y Contrato CM Mesa de Ayuda (Plazo Fijo).docx
+Cantidad de palabras repetidas: 1994 palabras en común
+Similitud del Coseno: 0.9938
+Similitud de Jaccard basada en bigramas: 0.9266
+Similitud de Dice basada en bigramas: 0.9619
+Similitud de Levenshtein a nivel de palabra: 118 ediciones
+

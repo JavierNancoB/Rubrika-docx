@@ -1,0 +1,20 @@
+Análisis de Documentos
+=================================
+Documento: Contrato Tesorero (Plazo Fijo) (Zona).docx
+Total de palabras (sin stopwords): 2315
+
+Cantidad de párrafos (antes de normalizar): 1
+
+Documento: Contrato Tesorero (Plazo Indefinido) (Zona).docx
+Total de palabras (sin stopwords): 2320
+
+Cantidad de párrafos (antes de normalizar): 1
+
+Comparaciones entre Contrato Tesorero (Plazo Fijo) (Zona).docx y Contrato Tesorero (Plazo Indefinido) (Zona).docx
+Cantidad de palabras repetidas: 2047 palabras en común
+Similitud del Coseno: 0.9940
+Similitud de Jaccard basada en bigramas: 0.9459
+Similitud de Dice basada en bigramas: 0.9722
+Similitud de Levenshtein a nivel de palabra: 104 ediciones
+No se encontraron diferencias específicas en las cláusulas.
+

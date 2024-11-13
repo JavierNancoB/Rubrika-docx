@@ -1,0 +1,15 @@
+Análisis de Documentos
+=================================
+Documento: Contrato CM 40 (Plazo Fijo).docx
+Total de palabras (sin stopwords): 2332
+
+Documento: Contrato CM Art 22 (Plazo Indefinido).docx
+Total de palabras (sin stopwords): 2246
+
+Comparaciones entre Contrato CM 40 (Plazo Fijo).docx y Contrato CM Art 22 (Plazo Indefinido).docx
+Cantidad de palabras repetidas: 1992 palabras en común
+Similitud del Coseno: 0.9931
+Similitud de Jaccard basada en bigramas: 0.9235
+Similitud de Dice basada en bigramas: 0.9602
+Similitud de Levenshtein a nivel de palabra: 128 ediciones
+

@@ -1,0 +1,20 @@
+Análisis de Documentos
+=================================
+Documento: Nuevo Text Document (2).docx
+Total de palabras (sin stopwords): 15
+
+Cantidad de párrafos (antes de normalizar): 1
+
+Documento: Nuevo Text Document.docx
+Total de palabras (sin stopwords): 1
+
+Cantidad de párrafos (antes de normalizar): 1
+
+Comparaciones entre Nuevo Text Document (2).docx y Nuevo Text Document.docx
+Cantidad de palabras repetidas: 0 palabras en común
+Similitud del Coseno: 1.0000
+Similitud de Jaccard basada en bigramas: 0.0000
+Similitud de Dice basada en bigramas: 0.0000
+Similitud de Levenshtein a nivel de palabra: 14 ediciones
+No se encontraron diferencias específicas en las cláusulas.
+

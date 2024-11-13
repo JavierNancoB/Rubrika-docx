@@ -33,9 +33,9 @@ def analizar_sintactico():
                 similitudes = calcular_similitudes_sintacticas(doc1_texto, doc2_texto)
                 
                 # Si el documento cumple los umbrales, agregarlo al grupo
-                if (similitudes['coseno'] > UMBRAL_SIMILITUD_COSENO and
-                    similitudes['jaccard'] > UMBRAL_SIMILITUD_JACCARD and
-                    similitudes['dice'] > UMBRAL_SIMILITUD_DICE):
+                if (similitudes['coseno'] >= UMBRAL_SIMILITUD_COSENO and
+                    similitudes['jaccard'] >= UMBRAL_SIMILITUD_JACCARD and
+                    similitudes['dice'] >= UMBRAL_SIMILITUD_DICE):
                     grupo_documentos.append(doc2)
                     documentos_agrupados.add(doc2)
         

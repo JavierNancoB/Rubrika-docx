@@ -6,6 +6,7 @@ from unidecode import unidecode
 import nltk
 nltk.download('stopwords')
 
+'''
 def clean_text(text):
     """Limpia el texto eliminando caracteres innecesarios y preservando los saltos de línea."""
     text = unidecode(text.lower())  # Convierte a minúsculas y elimina acentos
@@ -14,6 +15,33 @@ def clean_text(text):
     text = text.translate(str.maketrans('', '', string.punctuation))  # Elimina puntuación
     text = re.sub(r'\s+', ' ', text)  # Sustituye múltiples espacios por uno solo
     return text.strip()  # Elimina espacios al inicio y final
+'''
+
+def clean_text(text):
+    """Limpia el texto eliminando caracteres innecesarios y preservando los saltos de línea."""
+    # 1. Convertir a minúsculas y eliminar acentos
+    text = unidecode(text.lower())
+    
+    # 2. Unificar saltos de línea: múltiples \n seguidos se convierten en uno solo
+    text = re.sub(r'\n+', '\n', text)
+    
+    # 3. Unificar múltiples puntos consecutivos en un solo punto
+    text = re.sub(r'\.{2,}', '.', text)
+    
+    # 4. Eliminar puntuación
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    
+    # 5. Reemplazar múltiples espacios por uno solo, sin eliminar saltos de línea
+    #    Usamos [ \t]+ para no afectar los saltos de línea \n
+    text = re.sub(r'[ \t]+', ' ', text)
+    
+    # 6. Eliminar espacios al inicio y final de cada línea
+    lines = text.split('\n')
+    lines = [line.strip() for line in lines]
+    text = '\n'.join(lines)
+    
+    # 7. Quitar espacios en blanco innecesarios al inicio y final del texto completo (no afecta a los saltos de línea internos)
+    return text.strip()
 
 '''
 ENCONTRAR MULTIPLES PUNTOS DEJAR UNO SOLO

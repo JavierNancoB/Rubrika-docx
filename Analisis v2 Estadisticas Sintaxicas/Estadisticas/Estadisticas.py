@@ -1,3 +1,18 @@
+'''
+Este script lee los archivos de texto en una carpeta y extrae información estadística de los mismos.
+la estructura de la carpeta es la siguiente:
+
+- Analisis V2
+    - prueba.py
+    - text
+        - archivo1.txt
+        - archivo2.txt
+        - ...
+    - Estadisticas.py
+
+'''
+
+
 import os
 import re
 import numpy as np

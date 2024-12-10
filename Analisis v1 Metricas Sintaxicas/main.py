@@ -1,3 +1,17 @@
+# Autor: Javier Alonso Nanco Becerra
+# Fecha: 2024/09/30
+
+'''
+
+Este script realiza el análisis de los documentos del cliente y guarda los resultados en un archivo de texto.
+
+Tomando 2 archivos de texto, los limpia y los compara para encontrar similitudes y diferencias.
+
+Guarda los resultados en un archivo de texto.
+
+'''
+
+
 import os
 from datetime import datetime
 from document_reader import read_docx

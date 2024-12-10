@@ -13,6 +13,11 @@ def crear_carpetas():
     os.makedirs(RUTA_RESULTADOS, exist_ok=True)
 
 
+'''
+ESTANDARIZAR ARCHIVOS
+'''
+
+
 def extraer_texto_docx(ruta_archivo):
     # Extrae el texto de un archivo .docx y lo devuelve como una cadena de texto
     doc = Document(ruta_archivo)
